@@ -4,6 +4,7 @@ import requests
 import json
 import subprocess
 from presencedevice import PresenceDevice
+from raumfeldconnect import RFSoapConnect
 
 class SmartHomePresence(object):
 
@@ -20,8 +21,13 @@ class SmartHomePresence(object):
                 ndevice = PresenceDevice(device)
                 self.devices.append(ndevice)
 
+            # ping devices
             for device in self.devices:
                 print(device.getDeviceName() + ":" + str(self.isDeviceOnline(device)))
+
+            # connect to teufel streaming devices via SOAP
+            rfconnect = RFSoapConnect(jconfig["TeufelHost"], jconfig["TeufelPort"])
+            print(rfconnect.getDeviceStates()) 
 
         except IOError as e:
             print(e)

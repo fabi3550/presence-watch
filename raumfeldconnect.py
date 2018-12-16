@@ -73,12 +73,25 @@ class RFSoapConnect(object):
             # check for a valid answer. if given, return the trasport state from the answer
             if response.status_code == 200:
                 xml_response = ElementTree.fromstring(response.content)
-                transport_state = json.dumps({'device': url.split(":")[0], 'state': xml_response[0][0][0].text}, separators=(',', ':'))
+                transport_state = json.dumps({'device': url.split(":")[0], 'state': xml_response[0][0][0].text, 'status': xml_response[0][0][1].text}, separators=(',', ':'))
 
         except requests.exceptions.ConnectionError as e:
             print(e)
 
         return transport_state
+
+    # returns a complete list of states of all rendering devices in json
+    def getDeviceStates(self):
+
+        devicelist = []
+
+        devices = self.getRenderingDevices()
+
+        for device in devices:
+            state = self.getTransportState(device)
+            devicelist.append(state)
+
+        return json.dumps(devicelist, separators=(',', ':'))
 
 
 if __name__ == "__main__":
