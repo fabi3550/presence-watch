@@ -7,8 +7,8 @@ import time
 class HueMotionWatch(object):
 
     def __init__(self, huebridge, hueuser):
-        self.huebridge = "192.168.178.44"
-        self.hueuser = "D567Sx3i5gjhWpX9pDge4MYPRYrFFaq7Dfo1SnaF"
+        self.huebridge = huebridge
+        self.hueuser = hueuser
 
 
     def getMotionSensorData(self):
