@@ -18,4 +18,4 @@ class FritzHostsWatch(object):
         return online_hosts
 
 if __name__ == "__main__":
-    fhw = FritzHostsWatch("nina226")
+    pass
