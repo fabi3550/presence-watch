@@ -85,12 +85,6 @@ class SmartHomePresence(object):
         except ValueError as e:
             print(e)
 
-    def isMotionSensor(self):
-        pass
-
-    def getLastMotionTimestamp(self, sensor):
-        pass
-
     def isDeviceOnline(self, device):
 
         is_online = False
