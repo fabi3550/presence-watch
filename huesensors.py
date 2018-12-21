@@ -46,5 +46,4 @@ class HueMotionWatch(object):
         return motion_data
 
 if __name__ == "__main__":
-    motionwatch = HueMotionWatch('192.168.178.44', 'D567Sx3i5gjhWpX9pDge4MYPRYrFFaq7Dfo1SnaF')
-    print(motionwatch.getMotionSensorData())
+    pass

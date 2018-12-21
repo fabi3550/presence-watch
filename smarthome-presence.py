@@ -101,4 +101,4 @@ class SmartHomePresence(object):
         pass
 
 if __name__ == "__main__":
-    presencewatcher = SmartHomePresence("/home/fabian/Programmierung/Python/presence-watch/smarthome-presence.json")
+    presencewatcher = SmartHomePresence("PATH_TO_YOUR_CONFIG_FILE")

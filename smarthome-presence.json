@@ -1,0 +1,40 @@
+{
+  "FritzBox":
+    {
+      "Name": "FritzBox",
+      "Hostname": "fritz.box",
+      "FritzPassword": "my_secret_fritz_password"
+    },
+  "HueBridge":
+    {
+      "Name": "HueBridge",
+      "Hostname": "Philips-hue",
+      "HueUser": "hue_user_hash"
+    },
+  "TeufelStreaming":
+    {
+      "Name": "TeufelStreaming",
+      "Hostname": "192.168.178.XX",
+      "Port": 47365
+    },
+  "Devices": [
+    {
+      "Name": "Toms Laptop",
+      "Address": "192.168.178.XX",
+      "Owner": "Tom",
+      "Type": "Computer"
+    },
+    {
+      "Name": "Toms TV",
+      "Address": "192.168.178.XX",
+      "Owner": "undefined",
+      "Type": "TV"
+    },
+    {
+      "Name": "Jacks iPhone",
+      "Address": "192.168.178.XX",
+      "Owner": "Jack",
+      "Type": "Mobile Phone"
+    }  
+  ]
+}
